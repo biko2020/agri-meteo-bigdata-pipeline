@@ -76,6 +76,34 @@ agri-meteo-bigdata-pipeline/
 pip install --upgrade pip
 pip install -r requirements.txt
 
+
+## -***- Exécution du projet -***-
+
+ - # Exécution locale simple
+    # 1. Collecte des données 
+    python scripts/extract.py
+
+    # 2. Transformation (PySpark)
+    spark-submit scripts/transform.py
+
+    # 3. Chargement
+    python scripts/load.py
+    
+ - # Exécution Utiliser Docker
+    `Lancer l'ensemble des services (Spark + PostgreSQL + Jupyter):`
+    docker-compose up -d
+    docker exec -it spark-master bash
+    spark-submit /app/scripts/transform.py
+
+- # Exécution Utiliser Jupyter Notebook
+    jupyter lab notebooks/exploration.ipynb
+    `Ou via Docker :`
+    docker-compose up jupyter
+    http://localhost:8888
+
+---
+
+
 ## 👤 Contact
     **AIT OUFKIR BRAHIM** 
     Email : aitoufkirbrahimab@gmail.com
