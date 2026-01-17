@@ -1,7 +1,19 @@
 version: "3.8"
+
 services:
+  spark-master:
+    image: bitnami/spark:3.5
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+    volumes:
+      - ../:/app
+    ports:
+      - "8080:8080"
+
   postgres:
     image: postgres:15
+    container_name: postgres
     environment:
       POSTGRES_DB: agri_db
       POSTGRES_USER: postgres
