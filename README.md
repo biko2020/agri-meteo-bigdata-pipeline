@@ -105,16 +105,16 @@ docker ps
 
 ```bash
 # Accéder au conteneur Spark
-docker exec -it spark-master bash
+docker exec -it spark bash
 
 # 1. Extraction
-python /app/scripts/extract.py
+python3 /app/scripts/extract.py
 
 # 2. Transformation (PySpark)
 spark-submit /app/scripts/transform.py
 
 # 3. Chargement
-python /app/scripts/load.py
+python3 /app/scripts/load.py
 ```
 
 ### 4️⃣ Accéder à Spark UI
@@ -137,7 +137,7 @@ Ce pipeline est directement applicable pour :
 
 ---
 
-##  Dépendances Python dans `requirements.txt`
+## 📦 Dépendances Python
 
 ```
 pyspark
@@ -148,8 +148,9 @@ sqlalchemy
 psycopg2-binary
 ```
 
+---
 
-## Contact
+##  Contact
 
 **AIT OUFKIR BRAHIM**  
 Data Engineer / Big Data Developer
