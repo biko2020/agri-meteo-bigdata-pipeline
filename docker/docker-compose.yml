@@ -1,15 +1,16 @@
-version: "3.8"
-
 services:
-  spark-master:
-    image: bitnami/spark:3.5
-    container_name: spark-master
-    environment:
-      - SPARK_MODE=master
+  spark:
+    image: spark:3.4.1
+    container_name: spark
+    command: ["/bin/bash", "-c", "/opt/spark/sbin/start-master.sh && tail -f /dev/null"]
     volumes:
       - ../:/app
     ports:
       - "8080:8080"
+      - "7077:7077"
+    environment:
+      - PATH=/opt/spark/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 
   postgres:
     image: postgres:15

@@ -1,171 +1,158 @@
 # 🌾 Agri-Meteo Big Data Pipeline
 
-Pipeline **Big Data / ETL (Extract, Transform, Load)** pour collecter, nettoyer, transformer et analyser des données **météorologiques** (extensible aux données agricoles), afin de produire des **indicateurs décisionnels exploitables**.
-
-🎯 **Objectif du projet**  
-Démontrer la mise en place d’un pipeline de données **scalable, reproductible et orienté production**, prêt pour des **cas d’usage professionnels et missions freelance** (Data Engineering / Big Data / BI).
+Pipeline **Big Data / ETL** pour collecter, transformer et analyser des données météorologiques, produisant des **indicateurs décisionnels exploitables** pour l'agriculture, l'énergie et l'environnement.
 
 ---
 
 ## 🎯 Vision Métier
 
-Dans de nombreux secteurs (agriculture, énergie, environnement, logistique), les données météo sont :
-- dispersées (APIs, fichiers CSV),
-- volumineuses et hétérogènes,
-- difficiles à exploiter directement par les décideurs.
-
-Ce projet fournit une **chaîne de traitement complète** permettant de transformer ces données brutes en **KPI clairs et exploitables**, prêts à être visualisés dans des outils de Business Intelligence.
+Les données météorologiques sont souvent dispersées, volumineuses et difficiles à exploiter. Ce projet fournit une **chaîne de traitement complète** transformant les données brutes en **KPI clairs**, prêts pour la Business Intelligence.
 
 ---
 
-## 🧠 Logique du Pipeline (ETL)
+## 🧠 Architecture ETL
 
-Le projet suit une architecture ETL classique, orientée production :
-
-1. **Extract**
-   - Collecte automatisée des données météo via API publique
-   - Stockage des données brutes (*raw data*)
-
-2. **Transform**
-   - Nettoyage des données (formats, valeurs manquantes)
-   - Agrégation et calcul d’indicateurs avec **PySpark**
-
-3. **Load**
-   - Stockage optimisé au format **Parquet**
-   - Insertion dans une base **PostgreSQL**
-
-4. **Exploitation**
-   - Données prêtes pour la visualisation (Power BI, Tableau, etc.)
-
----
-
-## 🏗️ Architecture globale
-
+```
 API / CSV
-↓
+    ↓
 Python (Extract)
-↓
+    ↓
 PySpark (Transform)
-↓
+    ↓
 Parquet / PostgreSQL
-↓
+    ↓
 Dashboard BI
+```
 
-
----
-
-## 🛠️ Technologies utilisées
-
-- **Python**
-- **PySpark**
-- **Pandas**
-- **SQL / PostgreSQL**
-- **Docker & Docker Compose**
-- **Power BI / Tableau** (visualisation)
+**1. Extract** – Collecte automatisée via API  
+**2. Transform** – Nettoyage et agrégation avec PySpark  
+**3. Load** – Stockage optimisé (Parquet + PostgreSQL)  
+**4. Exploitation** – Visualisation BI (Power BI, Tableau)
 
 ---
 
-## 📊 Exemples d’indicateurs produits
+## 🛠️ Stack Technique
+
+- **Python** – Orchestration
+- **PySpark** – Traitement distribué
+- **PostgreSQL** – Base de données
+- **Docker & Docker Compose** – Déploiement
+- **Parquet** – Format optimisé
+- **Power BI / Tableau** – Visualisation
+
+---
+
+## 📊 Indicateurs Produits
 
 - Température moyenne par période
 - Cumul des précipitations
 - Tendances saisonnières
-- Données prêtes pour analyses métier ou corrélations ultérieures
+- Corrélations météo-agricoles
 
 ---
 
-## 📦 Dépendances
+## 📁 Structure du Projet
 
-Toutes les dépendances Python sont listées dans `requirements.txt` :
-pyspark
-pandas
-requests
-pyyaml
-sqlalchemy
-psycopg2-binary
-
-
----
-
-## 📁 Structure du projet
-
+```
 agri-meteo-bigdata-pipeline/
 │
 ├── data/
-│ ├── raw/ # Données brutes
-│ └── processed/ # Données transformées
+│   ├── raw/              # Données brutes
+│   └── processed/        # Données transformées
 │
 ├── scripts/
-│ ├── extract.py # Extraction des données
-│ ├── transform.py # Nettoyage & agrégation (PySpark)
-│ └── load.py # Chargement vers DB / Parquet
+│   ├── extract.py        # Extraction API
+│   ├── transform.py      # Transformation PySpark
+│   └── load.py           # Chargement DB
 │
 ├── notebooks/
-│ └── exploration.ipynb # Analyse exploratoire
+│   └── exploration.ipynb # Analyse exploratoire
 │
 ├── dashboard/
-│ └── screenshots/ # Captures des dashboards
+│   └── screenshots/      # Visualisations
 │
 ├── docker/
-│ ├── Dockerfile
-│ └── docker-compose.yml
+│   ├── Dockerfile
+│   └── docker-compose.yml
 │
 ├── config/
-│ └── config.yaml # Configuration API / DB
+│   └── config.yaml       # Configuration
 │
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 
 ---
 
-## ⚙️ Installation (Docker – recommandé)
+## 🐳 Installation avec Docker (Recommandé)
 
 ### 1️⃣ Cloner le projet
 
 ```bash
 git clone https://github.com/biko2020/agri-meteo-bigdata-pipeline.git
 cd agri-meteo-bigdata-pipeline
+```
 
-### 2️⃣ Lancer l’environnement complet avec Docker
+### 2️⃣ Démarrer l'environnement
+
+```bash
 docker compose up -d
 docker ps
+```
+
+### 3️⃣ Exécuter le pipeline
+
+```bash
+# Accéder au conteneur Spark
+docker exec -it spark-master bash
+
+# 1. Extraction
+python /app/scripts/extract.py
+
+# 2. Transformation (PySpark)
+spark-submit /app/scripts/transform.py
+
+# 3. Chargement
+python /app/scripts/load.py
+```
+
+### 4️⃣ Accéder à Spark UI
+
+```
+http://localhost:8080
+```
+
+---
+
+## 💼 Cas d'Usage Professionnels
+
+Ce pipeline est directement applicable pour :
+
+- Création de pipelines ETL production
+- Traitement de données volumineuses (Big Data)
+- Migration CSV/Excel vers bases de données
+- Préparation de données pour dashboards BI
+- Projets Data Engineering / Data Science
+
+---
+
+##  Dépendances Python dans `requirements.txt`
+
+```
+pyspark
+pandas
+requests
+pyyaml
+sqlalchemy
+psycopg2-binary
+```
 
 
-▶️ Exécution du pipeline avec Docker
-   # Accéder au conteneur Spark
-   docker exec -it spark-master bash 
+## Contact
 
-   # 1. Extraction
-   python /app/scripts/extract.py
+**AIT OUFKIR BRAHIM**  
+Data Engineer / Big Data Developer
 
-   # 2. Transformation (PySpark)
-   spark-submit /app/scripts/transform.py
-
-   # 3. Chargement
-   python /app/scripts/load.py
-
-
-###  Cas d’usage 
-
-* Ce pipeline est directement applicable à des missions telles que :
-
-* création de pipelines ETL,
-
-* traitement de données volumineuses,
-
-* migration CSV / Excel vers bases de données,
-
-* préparation de données pour dashboards BI,
-
-* projets Data Engineering / Big Data.
-
-
-### Contact
-
-** AIT OUFKIR BRAHIM
-** Data Engineer / Big Data Developer
-
-   - Email : aitoufkirbrahimab@gmail.com
-   - GitHub : https://github.com/biko2020/agri-meteo-bigdata-pipeline
+-  Email : aitoufkirbrahimab@gmail.com
+-  GitHub : [github.com/biko2020](https://github.com/biko2020/agri-meteo-bigdata-pipeline)
