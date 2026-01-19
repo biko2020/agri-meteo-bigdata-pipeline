@@ -1,4 +1,8 @@
+pyspark
 pandas
 requests
-pyspark
+pyyaml
+sqlalchemy
 psycopg2-binary
+pyarrow
+fastparquet

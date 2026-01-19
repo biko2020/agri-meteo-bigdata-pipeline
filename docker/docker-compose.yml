@@ -1,6 +1,8 @@
 services:
   spark:
-    image: spark:3.4.1
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
     container_name: spark
     command: ["/bin/bash", "-c", "/opt/spark/sbin/start-master.sh && tail -f /dev/null"]
     volumes:
@@ -9,8 +11,10 @@ services:
       - "8080:8080"
       - "7077:7077"
     environment:
-      - PATH=/opt/spark/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark
+    networks:
+      - agri-network
 
   postgres:
     image: postgres:15
@@ -21,3 +25,14 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - agri-network
+
+volumes:
+  postgres_data:
+
+networks:
+  agri-network:
+    driver: bridge
