@@ -110,7 +110,7 @@ docker exec -it spark bash
 # 1. Extraction
 python3 /app/scripts/extract.py
 
-# 2. Transformation (PySpark)
+# 2. Transformation et Nettoyage et calculs massifs  (PySpark)
 spark-submit /app/scripts/transform.py
 
 # 3. Chargement
