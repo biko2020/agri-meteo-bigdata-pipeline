@@ -60,10 +60,14 @@ agri-meteo-bigdata-pipeline/
 │   ├── raw/              # Données brutes
 │   └── processed/        # Données transformées
 │
+├── airflow/
+│   ├── dags/
+│   │   └── agri_meteo_etl.py
+│   └── docker-compose.airflow.yml
+│
 ├── scripts/
 │   ├── extract.py        # Extraction API
-│   ├── transform.py      # Transformation PySpark
-│   └── load.py           # Chargement DB
+│   └── transform.py      # Transformation 
 │
 ├── notebooks/
 │   └── exploration.ipynb # Analyse exploratoire
