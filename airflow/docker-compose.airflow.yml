@@ -1,32 +1,48 @@
-version: "3.8"
-
 services:
+  airflow-postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_pgdata:/var/lib/postgresql/data
+    networks:
+      - agri-network
+
   airflow:
     image: apache/airflow:2.8.1
-    container_name: airflow
+    depends_on:
+      - airflow-postgres
     environment:
-      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
-      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__WEBSERVER__SECRET_KEY: mysecretkey
     volumes:
       - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
       - ../:/app
     ports:
       - "8081:8080"
     command: >
       bash -c "
-      airflow db init &&
+      airflow db migrate &&
       airflow users create
         --username admin
         --password admin
-        --firstname admin
-        --lastname admin
+        --firstname Admin
+        --lastname User
         --role Admin
-        --email admin@local &&
+        --email admin@airflow.local || true &&
       airflow webserver & airflow scheduler
       "
     networks:
       - agri-network
+
+volumes:
+  airflow_pgdata:
 
 networks:
   agri-network:

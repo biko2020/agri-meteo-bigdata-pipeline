@@ -63,11 +63,15 @@ agri-meteo-bigdata-pipeline/
 ├── airflow/
 │   ├── dags/
 │   │   └── agri_meteo_etl.py
+│   ├── logs/
+│   ├── plugins/
 │   └── docker-compose.airflow.yml
+
 │
 ├── scripts/
 │   ├── extract.py        # Extraction API
-│   └── transform.py      # Transformation 
+│   ├── transform.py      # Transformation 
+│   └── load.py           # Chargement vers DB / Parquet
 │
 ├── notebooks/
 │   └── exploration.ipynb # Analyse exploratoire
@@ -77,7 +81,8 @@ agri-meteo-bigdata-pipeline/
 │
 ├── docker/
 │   ├── Dockerfile
-│   └── docker-compose.yml
+│   ├── docker-compose.yml        # Spark + Postgres métier
+│   ├── docker-compose.airflow.yml
 │
 ├── config/
 │   └── config.yaml       # Configuration
