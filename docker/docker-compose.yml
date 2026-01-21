@@ -35,4 +35,5 @@ volumes:
 
 networks:
   agri-network:
-    driver: bridge
+    external: true
+    
