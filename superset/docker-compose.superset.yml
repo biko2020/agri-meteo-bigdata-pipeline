@@ -8,5 +8,7 @@ services:
       - agri-network
     environment:
       SUPERSET_SECRET_KEY: mysecretkey
-    depends_on:
-      - postgres
+
+networks:
+  agri-network:
+    external: true
