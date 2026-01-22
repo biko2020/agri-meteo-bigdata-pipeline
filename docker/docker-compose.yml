@@ -30,13 +30,6 @@ services:
     networks:
       - agri-network
 
-volumes:
-  postgres_data:
-
-networks:
-  agri-network:
-    external: true
-
   metabase:
     image: metabase/metabase:latest
     container_name: metabase
@@ -46,3 +39,10 @@ networks:
       - agri-network
     depends_on:
       - postgres
+
+volumes:
+  postgres_data:
+
+networks:
+  agri-network:
+    external: true
