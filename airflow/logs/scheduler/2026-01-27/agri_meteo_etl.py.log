@@ -3163,3 +3163,234 @@
 [2026-01-27T17:50:23.098+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:50:23.098+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-01-27T17:50:23.126+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:50:23.126+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
 [2026-01-27T17:50:24.150+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.110 seconds
+[2026-01-27T17:50:54.443+0000] {processor.py:161} INFO - Started process (PID=2194) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:50:54.444+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:50:54.445+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:50:54.445+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:50:54.466+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:50:54.497+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:50:54.496+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:50:54.520+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:50:54.520+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:50:54.825+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.386 seconds
+[2026-01-27T17:51:25.217+0000] {processor.py:161} INFO - Started process (PID=2199) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:51:25.218+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:51:25.220+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:51:25.219+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:51:25.242+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:51:25.273+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:51:25.273+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:51:25.296+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:51:25.296+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:51:25.628+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.417 seconds
+[2026-01-27T17:51:56.038+0000] {processor.py:161} INFO - Started process (PID=2204) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:51:56.040+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:51:56.041+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:51:56.040+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:51:56.063+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:51:56.093+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:51:56.093+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:51:56.117+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:51:56.117+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:51:56.972+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.938 seconds
+[2026-01-27T17:52:27.439+0000] {processor.py:161} INFO - Started process (PID=2209) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:52:27.440+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:52:27.441+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:52:27.441+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:52:27.461+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:52:27.493+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:52:27.492+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:52:27.517+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:52:27.517+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:52:28.373+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.939 seconds
+[2026-01-27T17:52:58.836+0000] {processor.py:161} INFO - Started process (PID=2214) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:52:58.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:52:58.839+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:52:58.838+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:52:58.866+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:52:59.421+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:52:59.420+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:52:59.450+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:52:59.449+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:52:59.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.684 seconds
+[2026-01-27T17:53:29.708+0000] {processor.py:161} INFO - Started process (PID=2219) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:53:29.710+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:53:29.711+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:53:29.711+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:53:29.741+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:53:29.779+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:53:29.778+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:53:29.806+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:53:29.806+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:53:29.874+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.171 seconds
+[2026-01-27T17:54:00.278+0000] {processor.py:161} INFO - Started process (PID=2224) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:54:00.279+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:54:00.281+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:54:00.280+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:54:00.306+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:54:00.338+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:54:00.338+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:54:00.363+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:54:00.363+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:54:01.186+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.911 seconds
+[2026-01-27T17:54:31.640+0000] {processor.py:161} INFO - Started process (PID=2229) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:54:31.642+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:54:31.643+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:54:31.643+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:54:31.667+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:54:31.699+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:54:31.699+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:54:31.724+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:54:31.724+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:54:32.433+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.796 seconds
+[2026-01-27T17:55:02.941+0000] {processor.py:161} INFO - Started process (PID=2234) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:55:02.942+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:55:02.943+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:55:02.943+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:55:02.969+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:55:03.001+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:55:03.000+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:55:03.026+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:55:03.026+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:55:03.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.413 seconds
+[2026-01-27T17:55:33.856+0000] {processor.py:161} INFO - Started process (PID=2239) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:55:33.858+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:55:33.859+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:55:33.859+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:55:33.887+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:55:33.920+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:55:33.920+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:55:33.945+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:55:33.945+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:55:34.054+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.202 seconds
+[2026-01-27T17:56:04.208+0000] {processor.py:161} INFO - Started process (PID=2244) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:56:04.210+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:56:04.212+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:56:04.211+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:56:04.240+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:56:04.273+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:56:04.272+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:56:04.299+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:56:04.298+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:56:04.400+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.198 seconds
+[2026-01-27T17:56:34.648+0000] {processor.py:161} INFO - Started process (PID=2250) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:56:34.650+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:56:34.651+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:56:34.651+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:56:34.676+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:56:34.709+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:56:34.709+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:56:34.734+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:56:34.734+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:56:35.028+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.384 seconds
+[2026-01-27T17:57:05.170+0000] {processor.py:161} INFO - Started process (PID=2255) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:57:05.171+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:57:05.173+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:57:05.172+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:57:05.201+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:57:05.236+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:57:05.235+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:57:05.260+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:57:05.260+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:57:05.384+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.224 seconds
+[2026-01-27T17:57:35.562+0000] {processor.py:161} INFO - Started process (PID=2260) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:57:35.563+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:57:35.565+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:57:35.564+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:57:35.587+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:57:35.625+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:57:35.624+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:57:35.651+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:57:35.651+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:57:35.713+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.156 seconds
+[2026-01-27T17:58:05.921+0000] {processor.py:161} INFO - Started process (PID=2265) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:58:05.922+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:58:05.923+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:58:05.923+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:58:05.945+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:58:05.975+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:58:05.975+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:58:06.000+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:58:05.999+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:58:06.182+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.265 seconds
+[2026-01-27T17:58:36.388+0000] {processor.py:161} INFO - Started process (PID=2270) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:58:36.390+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:58:36.391+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:58:36.390+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:58:36.415+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:58:36.449+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:58:36.449+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:58:36.475+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:58:36.475+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:58:37.687+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.304 seconds
+[2026-01-27T17:59:08.011+0000] {processor.py:161} INFO - Started process (PID=2275) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:59:08.013+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:59:08.014+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:59:08.014+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:59:08.034+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:59:08.064+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:59:08.064+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:59:08.090+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:59:08.089+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:59:08.156+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.149 seconds
+[2026-01-27T17:59:38.474+0000] {processor.py:161} INFO - Started process (PID=2280) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:59:38.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T17:59:38.477+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:59:38.477+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:59:38.500+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T17:59:38.532+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:59:38.532+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T17:59:38.558+0000] {logging_mixin.py:188} INFO - [2026-01-27T17:59:38.558+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T17:59:39.931+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.466 seconds
+[2026-01-27T18:00:10.398+0000] {processor.py:161} INFO - Started process (PID=2285) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:00:10.400+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:00:10.402+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:00:10.402+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:00:10.428+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:00:10.461+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:00:10.461+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:00:10.489+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:00:10.488+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:00:10.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.174 seconds
+[2026-01-27T18:00:40.792+0000] {processor.py:161} INFO - Started process (PID=2290) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:00:40.793+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:00:40.795+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:00:40.794+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:00:40.817+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:00:40.848+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:00:40.848+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:00:40.873+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:00:40.873+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:00:40.979+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.191 seconds
+[2026-01-27T18:01:11.232+0000] {processor.py:161} INFO - Started process (PID=2295) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:01:11.233+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:01:11.235+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:01:11.234+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:01:11.263+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:01:11.299+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:01:11.299+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:01:11.327+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:01:11.327+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:01:12.700+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.472 seconds
+[2026-01-27T18:01:42.861+0000] {processor.py:161} INFO - Started process (PID=2300) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:01:42.863+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:01:42.865+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:01:42.864+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:01:42.894+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:01:42.925+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:01:42.925+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:01:42.951+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:01:42.951+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:01:43.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.156 seconds
+[2026-01-27T18:02:13.661+0000] {processor.py:161} INFO - Started process (PID=2305) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:02:13.662+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:02:13.663+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:02:13.663+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:02:13.685+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:02:13.717+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:02:13.717+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:02:13.742+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:02:13.741+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:02:14.459+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.803 seconds
+[2026-01-27T18:02:44.664+0000] {processor.py:161} INFO - Started process (PID=2310) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:02:44.665+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:02:44.667+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:02:44.666+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:02:44.696+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:02:44.729+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:02:44.728+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:02:44.754+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:02:44.753+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:02:45.925+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.264 seconds
+[2026-01-27T18:03:16.327+0000] {processor.py:161} INFO - Started process (PID=2315) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:03:16.329+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:03:16.330+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:03:16.330+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:03:16.358+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:03:16.390+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:03:16.390+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:03:16.415+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:03:16.415+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:03:17.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.046 seconds
+[2026-01-27T18:03:47.815+0000] {processor.py:161} INFO - Started process (PID=2320) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:03:47.817+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:03:47.818+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:03:47.818+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:03:47.845+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:03:47.876+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:03:47.876+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:03:47.902+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:03:47.902+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:03:49.272+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.460 seconds
+[2026-01-27T18:04:19.747+0000] {processor.py:161} INFO - Started process (PID=2325) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:04:19.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:04:19.750+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:04:19.749+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:04:19.776+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:04:19.809+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:04:19.808+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:04:19.835+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:04:19.835+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:04:19.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.151 seconds
+[2026-01-27T18:04:50.169+0000] {processor.py:161} INFO - Started process (PID=2330) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:04:50.171+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:04:50.172+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:04:50.172+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:04:50.198+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:04:50.230+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:04:50.230+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:04:50.255+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:04:50.255+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:04:50.896+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.731 seconds
+[2026-01-27T18:05:21.318+0000] {processor.py:161} INFO - Started process (PID=2335) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:05:21.319+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:05:21.320+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:05:21.320+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:05:21.341+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:05:21.373+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:05:21.372+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:05:21.397+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:05:21.397+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:05:21.764+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.450 seconds
+[2026-01-27T18:05:52.187+0000] {processor.py:161} INFO - Started process (PID=2340) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:05:52.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:05:52.190+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:05:52.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:05:52.213+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:05:52.243+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:05:52.243+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:05:52.268+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:05:52.268+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:05:53.824+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 1.640 seconds
+[2026-01-27T18:06:24.231+0000] {processor.py:161} INFO - Started process (PID=2345) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:06:24.233+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:06:24.234+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:06:24.234+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:06:24.258+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:06:24.290+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:06:24.290+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:06:24.314+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:06:24.314+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:06:25.047+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.821 seconds
+[2026-01-27T18:06:55.448+0000] {processor.py:161} INFO - Started process (PID=2350) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:06:55.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:06:55.451+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:06:55.450+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:06:55.474+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:06:55.507+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:06:55.506+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:06:55.533+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:06:55.532+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:06:56.294+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.851 seconds
+[2026-01-27T18:07:26.724+0000] {processor.py:161} INFO - Started process (PID=2355) to work on /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:07:26.725+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/agri_meteo_etl.py for tasks to queue
+[2026-01-27T18:07:26.727+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:07:26.726+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:07:26.749+0000] {processor.py:840} INFO - DAG(s) 'agri_meteo_etl' retrieved from /opt/airflow/dags/agri_meteo_etl.py
+[2026-01-27T18:07:26.779+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:07:26.779+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-27T18:07:26.805+0000] {logging_mixin.py:188} INFO - [2026-01-27T18:07:26.805+0000] {dag.py:3823} INFO - Setting next_dagrun for agri_meteo_etl to 2026-01-27 00:00:00+00:00, run_after=2026-01-28 00:00:00+00:00
+[2026-01-27T18:07:26.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/agri_meteo_etl.py took 0.160 seconds
