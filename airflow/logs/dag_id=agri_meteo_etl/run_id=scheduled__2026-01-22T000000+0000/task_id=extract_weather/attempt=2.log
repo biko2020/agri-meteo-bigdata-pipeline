@@ -1,0 +1,75 @@
+[2026-01-23T08:48:03.966+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [queued]>
+[2026-01-23T08:48:03.974+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [queued]>
+[2026-01-23T08:48:03.975+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-01-23T08:48:04.036+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-01-22 00:00:00+00:00
+[2026-01-23T08:48:04.050+0000] {standard_task_runner.py:60} INFO - Started process 256 to run task
+[2026-01-23T08:48:04.057+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-01-22T00:00:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmpxi8o8_n9']
+[2026-01-23T08:48:04.061+0000] {standard_task_runner.py:88} INFO - Job 60: Subtask extract_weather
+[2026-01-23T08:48:04.261+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [running]> on host fb0a8efbb54b
+[2026-01-23T08:48:04.434+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-22T00:00:00+00:00'
+[2026-01-23T08:48:04.435+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-01-23T08:48:04.437+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-01-23T08:48:04.445+0000] {subprocess.py:86} INFO - Output:
+[2026-01-23T08:48:04.482+0000] {subprocess.py:93} INFO - Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[2026-01-23T08:48:04.484+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-01-23T08:48:04.497+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-01-23T08:48:04.500+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260122T000000, start_date=20260123T084803, end_date=20260123T084804
+[2026-01-23T08:48:04.544+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 60 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 256)
+[2026-01-23T08:48:04.595+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-01-23T08:48:04.638+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-01-23T11:15:05.416+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [queued]>
+[2026-01-23T11:15:05.451+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [queued]>
+[2026-01-23T11:15:05.452+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-01-23T11:15:05.551+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-01-22 00:00:00+00:00
+[2026-01-23T11:15:05.557+0000] {standard_task_runner.py:60} INFO - Started process 1774 to run task
+[2026-01-23T11:15:05.560+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-01-22T00:00:00+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmpdxrxmd43']
+[2026-01-23T11:15:05.563+0000] {standard_task_runner.py:88} INFO - Job 68: Subtask extract_weather
+[2026-01-23T11:15:05.669+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [running]> on host fb0a8efbb54b
+[2026-01-23T11:15:05.802+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-22T00:00:00+00:00'
+[2026-01-23T11:15:05.804+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-01-23T11:15:05.805+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-01-23T11:15:05.814+0000] {subprocess.py:86} INFO - Output:
+[2026-01-23T11:15:05.923+0000] {subprocess.py:93} INFO - Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[2026-01-23T11:15:05.925+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-01-23T11:15:05.940+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-01-23T11:15:05.943+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260122T000000, start_date=20260123T111505, end_date=20260123T111505
+[2026-01-23T11:15:06.017+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 68 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 1774)
+[2026-01-23T11:15:06.094+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-01-23T11:15:06.120+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-01-24T08:22:25.914+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [queued]>
+[2026-01-24T08:22:25.923+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [queued]>
+[2026-01-24T08:22:25.923+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-01-24T08:22:26.084+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-01-22 00:00:00+00:00
+[2026-01-24T08:22:26.092+0000] {standard_task_runner.py:60} INFO - Started process 209 to run task
+[2026-01-24T08:22:26.099+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-01-22T00:00:00+00:00', '--job-id', '132', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmphgymtaw4']
+[2026-01-24T08:22:26.102+0000] {standard_task_runner.py:88} INFO - Job 132: Subtask extract_weather
+[2026-01-24T08:22:26.261+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-01-22T00:00:00+00:00 [running]> on host 94905f87a852
+[2026-01-24T08:22:26.494+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-22T00:00:00+00:00'
+[2026-01-24T08:22:26.495+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-01-24T08:22:26.496+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-01-24T08:22:26.505+0000] {subprocess.py:86} INFO - Output:
+[2026-01-24T08:22:26.522+0000] {subprocess.py:93} INFO - Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[2026-01-24T08:22:26.524+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-01-24T08:22:26.539+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-01-24T08:22:26.543+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260122T000000, start_date=20260124T082225, end_date=20260124T082226
+[2026-01-24T08:22:27.297+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 132 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 209)
+[2026-01-24T08:22:27.315+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-01-24T08:22:27.405+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -9,20 +9,25 @@ Pipeline **Big Data / ETL** pour collecter, transformer et analyser des données
 Les données météorologiques sont souvent dispersées, volumineuses et difficiles à exploiter. Ce projet fournit une **chaîne de traitement complète** transformant les données brutes en **KPI clairs**, prêts pour la Business Intelligence.
 
 ---
+### 📦 Architecture du Pipeline
+┌─────────────┐
+│   Extract   │  ← Récupération données météo (API/CSV)
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│ Transform   │  ← Nettoyage + Calculs KPI (Spark)
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│    Load     │  ← Chargement vers PostgreSQL
+└──────┬──────┘
+       │
+┌──────▼──────────────────────┐
+│  Visualisation & Analyse    │
+│  - Metabase (Dashboards)    │ ← Dashboard BI
+│  - Superset (Analytics)     │
+└─────────────────────────────┘
 
-## 🧠 Architecture ETL
-
-```
-API / CSV
-    ↓
-Python (Extract)
-    ↓
-PySpark (Transform)
-    ↓
-Parquet / PostgreSQL
-    ↓
-Dashboard BI
-```
 
 **1. Extract** – Collecte automatisée via API  
 **2. Transform** – Nettoyage et agrégation avec PySpark  
