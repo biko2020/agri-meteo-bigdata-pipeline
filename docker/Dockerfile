@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+# Download PostgreSQL JDBC driver
+RUN wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar \
+    -O /opt/spark/jars/postgresql-42.7.1.jar
+
 # Créer un lien symbolique pour python
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
