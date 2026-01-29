@@ -10,8 +10,13 @@ services:
       - agri-network
     environment:
       - SUPERSET_SECRET_KEY=mysecretkey
-      # Cette ligne aide Superset à savoir qu'il est derrière un proxy/localhost
-      - TALISMAN_ENABLED=False 
+      - TALISMAN_ENABLED=False
+    # Cette section automatise tout : Admin, DB Upgrade et Init
+    command: >
+      bash -c "superset fab create-admin --username admin --firstname brahim --lastname aitoufkir --email aitoufkirbrahimab@gmail.com --password admin &&
+               superset db upgrade &&
+               superset init &&
+               /usr/bin/run-server.sh --host 0.0.0.0 --port 8088 --with-threads --reload"
 
 networks:
   agri-network:

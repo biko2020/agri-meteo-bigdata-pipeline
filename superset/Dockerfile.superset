@@ -2,8 +2,8 @@ FROM apache/superset:latest
 
 USER root
 
-# Installer uniquement le driver PostgreSQL ici
-RUN pip install psycopg2-binary
+# Installation du driver PostgreSQL indispensable pour la connexion
+RUN pip install --no-cache-dir psycopg2-binary
 
-# On repasse à l'utilisateur superset par sécurité
+# Revenir à l'utilisateur par défaut pour la sécurité
 USER superset
