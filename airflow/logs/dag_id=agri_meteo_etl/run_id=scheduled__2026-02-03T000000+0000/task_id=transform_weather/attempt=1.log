@@ -1,0 +1,58 @@
+[2026-02-04T07:06:04.054+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.transform_weather scheduled__2026-02-03T00:00:00+00:00 [queued]>
+[2026-02-04T07:06:04.064+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.transform_weather scheduled__2026-02-03T00:00:00+00:00 [queued]>
+[2026-02-04T07:06:04.064+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-02-04T07:06:04.131+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_weather> on 2026-02-03 00:00:00+00:00
+[2026-02-04T07:06:04.138+0000] {standard_task_runner.py:60} INFO - Started process 3701 to run task
+[2026-02-04T07:06:04.142+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'transform_weather', 'scheduled__2026-02-03T00:00:00+00:00', '--job-id', '289', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmpp3by84vo']
+[2026-02-04T07:06:04.145+0000] {standard_task_runner.py:88} INFO - Job 289: Subtask transform_weather
+[2026-02-04T07:06:05.190+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.transform_weather scheduled__2026-02-03T00:00:00+00:00 [running]> on host e802c8773775
+[2026-02-04T07:06:06.038+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='transform_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-02-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-03T00:00:00+00:00'
+[2026-02-04T07:06:06.039+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-04T07:06:06.041+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark spark-submit /app/scripts/transform.py']
+[2026-02-04T07:06:06.050+0000] {subprocess.py:86} INFO - Output:
+[2026-02-04T07:06:34.163+0000] {subprocess.py:93} INFO - 2026-02-04 07:06:34,161 - INFO - Starting Agri Meteo Spark ETL
+[2026-02-04T07:06:34.359+0000] {subprocess.py:93} INFO - 26/02/04 07:06:34 INFO SparkContext: Running Spark version 3.4.1
+[2026-02-04T07:06:34.593+0000] {subprocess.py:93} INFO - 26/02/04 07:06:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-02-04T07:06:35.025+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO ResourceUtils: ==============================================================
+[2026-02-04T07:06:35.026+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-02-04T07:06:35.026+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO ResourceUtils: ==============================================================
+[2026-02-04T07:06:35.031+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO SparkContext: Submitted application: AgriMeteoETL
+[2026-02-04T07:06:35.087+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-02-04T07:06:35.099+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO ResourceProfile: Limiting resource is cpu
+[2026-02-04T07:06:35.101+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-02-04T07:06:35.375+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO SecurityManager: Changing view acls to: spark
+[2026-02-04T07:06:35.376+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO SecurityManager: Changing modify acls to: spark
+[2026-02-04T07:06:35.377+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO SecurityManager: Changing view acls groups to:
+[2026-02-04T07:06:35.378+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO SecurityManager: Changing modify acls groups to:
+[2026-02-04T07:06:35.378+0000] {subprocess.py:93} INFO - 26/02/04 07:06:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+[2026-02-04T07:06:36.314+0000] {subprocess.py:93} INFO - 26/02/04 07:06:36 INFO Utils: Successfully started service 'sparkDriver' on port 40677.
+[2026-02-04T07:06:36.521+0000] {subprocess.py:93} INFO - 26/02/04 07:06:36 INFO SparkEnv: Registering MapOutputTracker
+[2026-02-04T07:06:36.863+0000] {subprocess.py:93} INFO - 26/02/04 07:06:36 INFO SparkEnv: Registering BlockManagerMaster
+[2026-02-04T07:06:37.057+0000] {subprocess.py:93} INFO - 26/02/04 07:06:37 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-02-04T07:06:37.057+0000] {subprocess.py:93} INFO - 26/02/04 07:06:37 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-02-04T07:06:37.149+0000] {subprocess.py:93} INFO - 26/02/04 07:06:37 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-02-04T07:06:37.514+0000] {subprocess.py:93} INFO - 26/02/04 07:06:37 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-beef01d8-2521-481b-8e85-fddd9cc02b39
+[2026-02-04T07:06:37.535+0000] {subprocess.py:93} INFO - 26/02/04 07:06:37 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2026-02-04T07:06:37.627+0000] {subprocess.py:93} INFO - 26/02/04 07:06:37 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-02-04T07:06:38.305+0000] {subprocess.py:93} INFO - 26/02/04 07:06:38 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-02-04T07:06:38.393+0000] {subprocess.py:93} INFO - 26/02/04 07:06:38 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-02-04T07:06:38.977+0000] {subprocess.py:93} INFO - 26/02/04 07:06:38 INFO Executor: Starting executor ID driver on host f6a90490f3f2
+[2026-02-04T07:06:39.003+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-02-04T07:06:39.117+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39905.
+[2026-02-04T07:06:39.117+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO NettyBlockTransferService: Server created on f6a90490f3f2:39905
+[2026-02-04T07:06:39.121+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-02-04T07:06:39.176+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, f6a90490f3f2, 39905, None)
+[2026-02-04T07:06:39.197+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO BlockManagerMasterEndpoint: Registering block manager f6a90490f3f2:39905 with 434.4 MiB RAM, BlockManagerId(driver, f6a90490f3f2, 39905, None)
+[2026-02-04T07:06:39.266+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, f6a90490f3f2, 39905, None)
+[2026-02-04T07:06:39.277+0000] {subprocess.py:93} INFO - 26/02/04 07:06:39 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, f6a90490f3f2, 39905, None)
+[2026-02-04T07:06:40.054+0000] {subprocess.py:93} INFO - 2026-02-04 07:06:40,053 - INFO - Reading raw data from /app/data/raw/weather.csv
+[2026-02-04T07:07:41.656+0000] {subprocess.py:93} INFO - 2026-02-04 07:07:41,642 - INFO - Raw rows count: 7
+[2026-02-04T07:07:42.996+0000] {subprocess.py:93} INFO - 2026-02-04 07:07:42,994 - INFO - Clean rows count: 7
+[2026-02-04T07:07:43.518+0000] {subprocess.py:93} INFO - 2026-02-04 07:07:43,516 - INFO - KPI climate_risk computed
+[2026-02-04T07:07:51.622+0000] {subprocess.py:93} INFO - 2026-02-04 07:07:51,621 - INFO - Parquet written to /app/data/processed/weather
+[2026-02-04T07:07:56.282+0000] {subprocess.py:93} INFO - 2026-02-04 07:07:56,280 - INFO - Data successfully loaded into PostgreSQL
+[2026-02-04T07:07:57.341+0000] {subprocess.py:93} INFO - 2026-02-04 07:07:57,264 - INFO - Spark ETL finished successfully
+[2026-02-04T07:07:57.529+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-04T07:07:57.970+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=agri_meteo_etl, task_id=transform_weather, execution_date=20260203T000000, start_date=20260204T070604, end_date=20260204T070757
+[2026-02-04T07:07:58.302+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-04T07:07:58.391+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

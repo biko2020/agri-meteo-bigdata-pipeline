@@ -1,0 +1,154 @@
+[2026-02-03T10:37:39.034+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T10:37:39.048+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T10:37:39.049+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-02-03T10:37:39.246+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-02-02 00:00:00+00:00
+[2026-02-03T10:37:39.266+0000] {standard_task_runner.py:60} INFO - Started process 9299 to run task
+[2026-02-03T10:37:39.275+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-02-02T00:00:00+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmpfsqegvh3']
+[2026-02-03T10:37:39.280+0000] {standard_task_runner.py:88} INFO - Job 277: Subtask extract_weather
+[2026-02-03T10:37:40.325+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [running]> on host e802c8773775
+[2026-02-03T10:37:41.394+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-02-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-02T00:00:00+00:00'
+[2026-02-03T10:37:41.398+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-03T10:37:41.400+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-02-03T10:37:41.632+0000] {subprocess.py:86} INFO - Output:
+[2026-02-03T10:38:07.239+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-02-03T10:38:07.241+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connection.py", line 199, in _new_conn
+[2026-02-03T10:38:07.243+0000] {subprocess.py:93} INFO -     sock = connection.create_connection(
+[2026-02-03T10:38:07.245+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/util/connection.py", line 60, in create_connection
+[2026-02-03T10:38:07.246+0000] {subprocess.py:93} INFO -     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+[2026-02-03T10:38:07.247+0000] {subprocess.py:93} INFO -   File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+[2026-02-03T10:38:07.248+0000] {subprocess.py:93} INFO -     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+[2026-02-03T10:38:07.249+0000] {subprocess.py:93} INFO - socket.gaierror: [Errno -2] Name or service not known
+[2026-02-03T10:38:07.250+0000] {subprocess.py:93} INFO - 
+[2026-02-03T10:38:07.251+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-02-03T10:38:07.252+0000] {subprocess.py:93} INFO - 
+[2026-02-03T10:38:07.252+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-02-03T10:38:07.253+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 789, in urlopen
+[2026-02-03T10:38:07.254+0000] {subprocess.py:93} INFO -     response = self._make_request(
+[2026-02-03T10:38:07.254+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 490, in _make_request
+[2026-02-03T10:38:07.255+0000] {subprocess.py:93} INFO -     raise new_e
+[2026-02-03T10:38:07.256+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 466, in _make_request
+[2026-02-03T10:38:07.256+0000] {subprocess.py:93} INFO -     self._validate_conn(conn)
+[2026-02-03T10:38:07.257+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+[2026-02-03T10:38:07.258+0000] {subprocess.py:93} INFO -     conn.connect()
+[2026-02-03T10:38:07.259+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connection.py", line 693, in connect
+[2026-02-03T10:38:07.259+0000] {subprocess.py:93} INFO -     self.sock = sock = self._new_conn()
+[2026-02-03T10:38:07.260+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connection.py", line 206, in _new_conn
+[2026-02-03T10:38:07.260+0000] {subprocess.py:93} INFO -     raise NameResolutionError(self.host, self, e) from e
+[2026-02-03T10:38:07.261+0000] {subprocess.py:93} INFO - urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x76b56ab15c10>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)
+[2026-02-03T10:38:07.262+0000] {subprocess.py:93} INFO - 
+[2026-02-03T10:38:07.262+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-02-03T10:38:07.263+0000] {subprocess.py:93} INFO - 
+[2026-02-03T10:38:07.263+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-02-03T10:38:07.264+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 667, in send
+[2026-02-03T10:38:07.264+0000] {subprocess.py:93} INFO -     resp = conn.urlopen(
+[2026-02-03T10:38:07.265+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 843, in urlopen
+[2026-02-03T10:38:07.265+0000] {subprocess.py:93} INFO -     retries = retries.increment(
+[2026-02-03T10:38:07.266+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/urllib3/util/retry.py", line 519, in increment
+[2026-02-03T10:38:07.266+0000] {subprocess.py:93} INFO -     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[2026-02-03T10:38:07.267+0000] {subprocess.py:93} INFO - urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=33.6&longitude=-7.6&daily=temperature_2m_max%2Cprecipitation_sum&timezone=Africa%2FCasablanca (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76b56ab15c10>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-02-03T10:38:07.267+0000] {subprocess.py:93} INFO - 
+[2026-02-03T10:38:07.268+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2026-02-03T10:38:07.268+0000] {subprocess.py:93} INFO - 
+[2026-02-03T10:38:07.269+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-02-03T10:38:07.269+0000] {subprocess.py:93} INFO -   File "/app/scripts/extract.py", line 23, in <module>
+[2026-02-03T10:38:07.270+0000] {subprocess.py:93} INFO -     fetch_weather()
+[2026-02-03T10:38:07.270+0000] {subprocess.py:93} INFO -   File "/app/scripts/extract.py", line 13, in fetch_weather
+[2026-02-03T10:38:07.270+0000] {subprocess.py:93} INFO -     response = requests.get(url, params=params)
+[2026-02-03T10:38:07.271+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/requests/api.py", line 73, in get
+[2026-02-03T10:38:07.272+0000] {subprocess.py:93} INFO -     return request("get", url, params=params, **kwargs)
+[2026-02-03T10:38:07.272+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/requests/api.py", line 59, in request
+[2026-02-03T10:38:07.273+0000] {subprocess.py:93} INFO -     return session.request(method=method, url=url, **kwargs)
+[2026-02-03T10:38:07.273+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 589, in request
+[2026-02-03T10:38:07.274+0000] {subprocess.py:93} INFO -     resp = self.send(prep, **send_kwargs)
+[2026-02-03T10:38:07.274+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 703, in send
+[2026-02-03T10:38:07.274+0000] {subprocess.py:93} INFO -     r = adapter.send(request, **kwargs)
+[2026-02-03T10:38:07.275+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 700, in send
+[2026-02-03T10:38:07.275+0000] {subprocess.py:93} INFO -     raise ConnectionError(e, request=request)
+[2026-02-03T10:38:07.276+0000] {subprocess.py:93} INFO - requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=33.6&longitude=-7.6&daily=temperature_2m_max%2Cprecipitation_sum&timezone=Africa%2FCasablanca (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76b56ab15c10>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-02-03T10:38:07.889+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-02-03T10:38:07.922+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-02-03T10:38:08.027+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260202T000000, start_date=20260203T103739, end_date=20260203T103808
+[2026-02-03T10:38:08.224+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 277 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 9299)
+[2026-02-03T10:38:08.348+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-02-03T10:38:08.401+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-02-03T14:24:56.322+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T14:24:56.383+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T14:24:56.384+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-02-03T14:24:56.608+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-02-02 00:00:00+00:00
+[2026-02-03T14:24:56.614+0000] {standard_task_runner.py:60} INFO - Started process 239 to run task
+[2026-02-03T14:24:56.618+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-02-02T00:00:00+00:00', '--job-id', '280', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmpa598p3jh']
+[2026-02-03T14:24:56.621+0000] {standard_task_runner.py:88} INFO - Job 280: Subtask extract_weather
+[2026-02-03T14:24:56.808+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [running]> on host e802c8773775
+[2026-02-03T14:24:57.067+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-02-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-02T00:00:00+00:00'
+[2026-02-03T14:24:57.070+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-03T14:24:57.072+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-02-03T14:24:57.090+0000] {subprocess.py:86} INFO - Output:
+[2026-02-03T14:24:59.495+0000] {subprocess.py:93} INFO - Error response from daemon: container 47691349ff05b3824ae86e287732ad4fcbc2a780af9c4ea0215e39fbf696e48f is not running
+[2026-02-03T14:24:59.497+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-02-03T14:24:59.511+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-02-03T14:24:59.522+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260202T000000, start_date=20260203T142456, end_date=20260203T142459
+[2026-02-03T14:24:59.761+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 280 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 239)
+[2026-02-03T14:24:59.811+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-02-03T14:24:59.836+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-02-03T14:35:37.392+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T14:35:37.401+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T14:35:37.401+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-02-03T14:35:37.480+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-02-02 00:00:00+00:00
+[2026-02-03T14:35:37.492+0000] {standard_task_runner.py:60} INFO - Started process 368 to run task
+[2026-02-03T14:35:37.499+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-02-02T00:00:00+00:00', '--job-id', '282', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmpuxu3y3in']
+[2026-02-03T14:35:37.503+0000] {standard_task_runner.py:88} INFO - Job 282: Subtask extract_weather
+[2026-02-03T14:35:37.716+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [running]> on host e802c8773775
+[2026-02-03T14:35:37.943+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-02-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-02T00:00:00+00:00'
+[2026-02-03T14:35:37.945+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-03T14:35:37.953+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-02-03T14:35:37.962+0000] {subprocess.py:86} INFO - Output:
+[2026-02-03T14:35:38.013+0000] {subprocess.py:93} INFO - Error response from daemon: container 47691349ff05b3824ae86e287732ad4fcbc2a780af9c4ea0215e39fbf696e48f is not running
+[2026-02-03T14:35:38.015+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-02-03T14:35:38.028+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-02-03T14:35:38.032+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260202T000000, start_date=20260203T143537, end_date=20260203T143538
+[2026-02-03T14:35:38.089+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 282 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 368)
+[2026-02-03T14:35:38.115+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-02-03T14:35:38.143+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-02-03T14:48:30.010+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T14:48:30.058+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [queued]>
+[2026-02-03T14:48:30.059+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-02-03T14:48:30.115+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_weather> on 2026-02-02 00:00:00+00:00
+[2026-02-03T14:48:30.123+0000] {standard_task_runner.py:60} INFO - Started process 517 to run task
+[2026-02-03T14:48:30.128+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'agri_meteo_etl', 'extract_weather', 'scheduled__2026-02-02T00:00:00+00:00', '--job-id', '284', '--raw', '--subdir', 'DAGS_FOLDER/agri_meteo_etl.py', '--cfg-path', '/tmp/tmp5oykhdav']
+[2026-02-03T14:48:30.132+0000] {standard_task_runner.py:88} INFO - Job 284: Subtask extract_weather
+[2026-02-03T14:48:30.351+0000] {task_command.py:423} INFO - Running <TaskInstance: agri_meteo_etl.extract_weather scheduled__2026-02-02T00:00:00+00:00 [running]> on host e802c8773775
+[2026-02-03T14:48:30.564+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='agri_meteo_etl' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-02-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-02T00:00:00+00:00'
+[2026-02-03T14:48:30.567+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-03T14:48:30.568+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark python3 /app/scripts/extract.py']
+[2026-02-03T14:48:30.576+0000] {subprocess.py:86} INFO - Output:
+[2026-02-03T14:48:30.639+0000] {subprocess.py:93} INFO - Error response from daemon: container 47691349ff05b3824ae86e287732ad4fcbc2a780af9c4ea0215e39fbf696e48f is not running
+[2026-02-03T14:48:30.641+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-02-03T14:48:30.654+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-02-03T14:48:30.658+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=agri_meteo_etl, task_id=extract_weather, execution_date=20260202T000000, start_date=20260203T144830, end_date=20260203T144830
+[2026-02-03T14:48:30.725+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 284 for task extract_weather (Bash command failed. The command returned a non-zero exit code 1.; 517)
+[2026-02-03T14:48:30.743+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-02-03T14:48:30.773+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
