@@ -1,8 +1,6 @@
 services:
   superset:
-    build:
-      context: .
-      dockerfile: Dockerfile.superset
+    image: apache/superset:2.1.0
     container_name: superset
     ports:
       - "8088:8088"
@@ -11,12 +9,13 @@ services:
     environment:
       - SUPERSET_SECRET_KEY=mysecretkey
       - TALISMAN_ENABLED=False
-    # Cette section automatise tout : Admin, DB Upgrade et Init
     command: >
-      bash -c "superset fab create-admin --username admin --firstname brahim --lastname aitoufkir --email aitoufkirbrahimab@gmail.com --password admin &&
-               superset db upgrade &&
-               superset init &&
-               /usr/bin/run-server.sh --host 0.0.0.0 --port 8088 --with-threads --reload"
+      bash -c "
+      pip install psycopg2-binary &&
+      superset db upgrade &&
+      superset init &&
+      /usr/bin/run-server.sh --host 0.0.0.0 --port 8088
+      "
 
 networks:
   agri-network:

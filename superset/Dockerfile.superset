@@ -2,8 +2,13 @@ FROM apache/superset:latest
 
 USER root
 
-# Installation du driver PostgreSQL indispensable pour la connexion
-RUN pip install --no-cache-dir psycopg2-binary
+# Dépendances système nécessaires
+RUN apt-get update && apt-get install -y \
+    libpq-dev gcc \
+    && rm -rf /var/lib/apt/lists/*
 
-# Revenir à l'utilisateur par défaut pour la sécurité
+# Installer support PostgreSQL complet Superset
+RUN pip install --upgrade pip \
+    && pip install "apache-superset[postgres]"
+
 USER superset
