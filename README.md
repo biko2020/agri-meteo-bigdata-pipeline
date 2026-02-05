@@ -214,7 +214,7 @@ docker ps
 | **Airflow** | http://localhost:8081 | admin / admin |
 | **Metabase** | http://localhost:3000 | (première connexion) |
 | **Spark UI** | http://localhost:8080 | - |
-| **Superset** (opt.) | http://localhost:8088 | admin / admin |
+| **Superset** | http://localhost:8088 | admin / admin |
 
 ### 5️⃣ Exécuter le Pipeline
 
