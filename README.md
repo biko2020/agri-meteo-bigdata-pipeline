@@ -127,6 +127,12 @@ Les données météorologiques sont souvent dispersées, volumineuses et diffici
 </table>
 
 ---
+### 📥 Tableau de bord interactif
+Pour reproduire ou explorer le tableau de bord localement, vous pouvez importer le fichier de configuration suivant dans votre propre instance Apache Superset :
+[Download Superset Dashboard Export (ZIP)](dashboard/superset_export.zip)
+*Remarque : La table `weather_kpi` doit être présente dans votre base de données PostgreSQL.*
+
+---
 
 ## 📁 Structure du Projet
 ```
@@ -140,33 +146,34 @@ agri-meteo-bigdata-pipeline/
 │   ├── Dockerfile                  # Custom Airflow + Docker CLI
 │   └── docker-compose.airflow.yml
 │
+├── config/
+│   └── config.yaml                 # Configuration (si nécessaire)
+│
+├── dashboard/
+│   ├── superset_export.zip         # Dashboard Apache Superset
+│   └── screenshots/                # Dashboard Metabase
+│
+├── data/
+│   ├── raw/                        # CSV bruts (staging)
+│   │   └── weather.csv             
+│   └── processed/                  # Parquet partitionné (Data Lake)
+│
 ├── docker/                         # Infrastructure
 │   ├── Dockerfile                  # Spark + PostgreSQL JDBC
-│   ├── docker-compose.yml          # Spark, Postgres, Metabase
-│   └── requirements.txt            # Dépendances Python
+│   └── docker-compose.yml          # Spark, Postgres, Metabase
 │
 ├── scripts/                        # Scripts ETL
 │   ├── extract.py                  # Extraction API Open-Meteo
 │   ├── transform.py                # Transformation PySpark
 │   └── load.py                     # Chargement PostgreSQL
 │
-├── data/
-│   ├── raw/                        # CSV bruts (staging)
-│   └── processed/                  # Parquet partitionné (Data Lake)
+├── superset/                      # superset 
+│   └── docker-compose.superset.yml
 │
-├── dashboard/
-│   └── screenshots/                # Captures Metabase
-│
-├── notebooks/                      # (Optionnel) Exploration
-│   └── exploration.ipynb
-│
-├── config/
-│   └── config.yaml                 # Configuration (si nécessaire)
-│
-├── requirements.txt
+├── .gitignore
+├── clean-docker.bat
 ├── README.md
-└── .gitignore
-```
+└── requirements.txt                # Dépendances Python
 
 ---
 
